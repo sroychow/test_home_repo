@@ -1,0 +1,90 @@
+START
+dataType mc
+readTrk  0
+readTrigObject 0
+createMVATree 0
+puHistFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/15Sept2014/reweightFunctionFall12.root
+histFile  /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/15Sept2014/DYJets/20PU/DYJets_20PU.root
+logFile   /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/15Sept2014/DYJets/20PU/DYJets_20PU_CSA14.out
+eventFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/15Sept2014/DYJets/20PU/DYJets_20PU_events_CSA14.out
+mvaInputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/15Sept2014/DYJets/20PU/DYJets_20PU_mva_CSA14.root
+readMVA 0
+logOption 0
+maxEvent  -1
+vtxCutList ndf=7 dxy=2 z=24
+muonCutList eta=2.1 pt=0.1 nChambers=2 nMatches=2 nMatchedStations=2
+muonCutList pixHits=1 trkHits=8 globalChi2=10.0 trkD0=0.02 dB=0.02 vtxDistZ=0.2 dz=0.2 relIso=0.1
+electronCutList pt=24 eta=2.1 missingHits=1 dB=0.02 trkHits=8 pixHits=1 trkD0=0.045 dz=0.2 relIsoBarrel=0.15 relIsoEndCap=0.1
+electronCutList etaLow=1.4442 etaUp=1.566 scEtaLow=1.4442 scEtaUp=1.566 eleId=7
+tauCutList eta=2.3 pt=10 dz=0.2 muVeto=0.5 eleVeto=0.5
+bjetCutList eta=2.4 pt=20 useTCHE=0 TCHECut=3.3 SVHECut=1.74 CSVCut=0.898
+evselCutList drMuTau=0.5 drTauTau=0.5 drEleTau=0.5 ptTau1=25 ptTau2=20 muVetoPt=15 eleVetoPt=15 etaTau1=2.3 etaTau2=2.3
+evselCutList dzMuTauVtx=0.14 dzTauTauVtx=0.14 dzEleTauVtx=0.14 eTauMass=80 tauPairPt=50
+evselCutList maxPtDiff=20 maxDr=0.1 massLow=30 massHigh=120 tagPt=15 maxMET=30
+useTrigger 0
+trigPathList HLT_Ele20_CaloIdVT_CaloIsoRhoT_TrkIdT_TrkIsoT_LooseIsoPFTau20L1Jet_v
+trigPathList HLT_Ele20_CaloIdVT_CaloIsoRhoT_TrkIdT_TrkIsoT_LooseIsoPFTau22L1Jet_v
+trigPathList HLT_Ele20_CaloIdVT_CaloIsoRhoT_TrkIdT_TrkIsoT_LooseIsoPFTau20_v
+trigPathList HLT_Ele22_CaloIdVT_CaloIsoRhoT_TrkIdT_TrkIsoT_LooseIsoPFTau20_v
+trigPathList HLT_Ele22_eta2p1_WP90Rho_LooseIsoPFTau20_v
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_1.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_28.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_24.root
+#inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_9.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_30.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_26.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_13.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_11.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_18.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_20.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_2.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_25.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_15.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_4.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_19.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_10.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_7.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_16.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_23.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_5.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_14.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_22.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_8.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_17.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_6.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_21.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_29.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_12.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_3.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_36.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_51.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_33.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_38.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_52.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_44.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_50.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_42.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_57.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_40.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_48.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_46.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_43.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_59.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_45.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_60.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_41.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_37.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_55.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_47.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_35.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_39.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_56.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_54.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_53.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_58.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_31.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_49.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_61.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_32.root
+inputFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/test/MiniDYJets/OUT/DYJets_Skim_20PU_miniAOD_CSA14_34.root
+END

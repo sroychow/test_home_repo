@@ -1,0 +1,31 @@
+START
+dataType mc
+readTrk  0
+readTrigObject 0
+puHistFile /afs/cern.ch/work/a/amodak/public/CSA14/CMSSW_7_0_7_patch1/src/15Sept2014/reweightFunctionFall12.root
+histFile  test_eltau.root
+logFile   test_eltau.out
+eventFile test_events_.out
+createMVATree 0
+mvaInputFile VH125_tmva_4.root
+readMVA 0
+logOption 0
+maxEvent -1
+vtxCutList ndf=4 dxy=2 z=24
+muonCutList eta=2.4 pt=10 nChambers=2 nMatches=2 nMatchedStations=2
+muonCutList pixHits=1 trkHits=8 globalChi2=10.0 trkD0=0.02 dB=0.02 vtxDistZ=0.2 dz=0.2 relIso=0.1
+electronCutList pt=10 eta=2.5 missingHits=1 dB=0.02 trkHits=8 pixHits=1 trkD0=0.045 dz=0.2 relIsoBarrel=0.15 relIsoEndCap=0.1
+electronCutList etaLow=1.4442 etaUp=1.566 scEtaLow=1.4442 scEtaUp=1.566 eleId=7
+tauCutList eta=2.3 pt=20 dz=0.2 muVeto=0.5 eleVeto=0.5
+bjetCutList eta=2.4 pt=20 useTCHE=0 TCHECut=3.3 SVHECut=1.74
+evselCutList drMuTau=0.5 drTauTau=0.5 drEleTau=0.5 ptTau1=20 ptTau2=20 muVetoPt=15 eleVetoPt=15 etaTau1=2.3 etaTau2=2.3
+evselCutList dzMuTauVtx=0.14 dzTauTauVtx=0.14 dzEleTauVtx=0.14 eTauMass=80 tauPairPt=50
+evselCutList maxPtDiff=20 maxDr=0.1 massLow=30 massHigh=120 tagPt=15 maxMET=30
+useTrigger 0
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_1.root
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_2.root
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_3.root
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_4.root
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_5.root
+inputFile /afs/cern.ch/work/k/kchatter/public/VHTauTau_miniAOD/CMSSW_7_0_7_patch1/src/AnalysisSpace/TreeMaker/jobs/VH20PU/OUT/VH_20PU_miniAOD_CSA14_6.root   
+END

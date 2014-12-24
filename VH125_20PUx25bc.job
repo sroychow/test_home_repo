@@ -1,0 +1,53 @@
+START
+dataType mc
+readTrk  0
+readTrigObject 0
+puHistFile /cmshome/kchatter/CMSSW_5_3_7_patch4/src/VHTauTau/TreeAnalyzer/Analysis/reweightFunctionFall12.root
+histFile /lustre/home/kchatter/04Jun2014/VH125_20PUx25bc/VH125_20PUx25bc.root
+logFile /lustre/home/kchatter/04Jun2014/VH125_20PUx25bc/VH125_20PUx25bc.out
+eventFile /lustre/home/kchatter/04Jun2014/VH125_20PUx25bc/VH125_20PUx25bc_events.out
+createMVATree 0
+mvaInputFile  /lustre/home/kchatter/04Jun2014/VH125_20PUx25bc/VH125_20PUx25bc_tmva.root
+readMVA 0
+logOption 0
+maxEvent -1
+vtxCutList ndf=4 dxy=2 z=24
+muonCutList eta=2.1 pt=0.1 nChambers=2 nMatches=2 nMatchedStations=2
+muonCutList pixHits=1 trkHits=8 globalChi2=10.0 trkD0=0.02 dB=0.02 vtxDistZ=0.2 dz=0.2 relIso=0.1
+electronCutList pt=24 eta=2.1 missingHits=1 dB=0.02 trkHits=8 pixHits=1 trkD0=0.045 dz=0.2 relIsoBarrel=0.15 relIsoEndCap=0.1
+electronCutList etaLow=1.4442 etaUp=1.566 scEtaLow=1.4442 scEtaUp=1.566 eleId=7
+tauCutList eta=2.3 pt=10 dz=0.2 muVeto=0.5 eleVeto=0.5
+bjetCutList eta=2.4 pt=20 useTCHE=0 TCHECut=3.3 SVHECut=1.74
+evselCutList drMuTau=0.5 drTauTau=0.5 drEleTau=0.5 ptTau1=25 ptTau2=20 muVetoPt=15 eleVetoPt=15 etaTau1=2.3 etaTau2=2.3
+evselCutList dzMuTauVtx=0.14 dzTauTauVtx=0.14 dzEleTauVtx=0.14 eTauMass=80 tauPairPt=50
+evselCutList maxPtDiff=20 maxDr=0.1 massLow=30 massHigh=120 tagPt=15 maxMET=30
+useTrigger 0
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_1.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_10.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_11.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_12.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_13.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_14.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_15.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_16.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_17.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_18.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_19.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_2.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_20.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_21.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_22.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_23.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_24.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_25.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_26.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_27.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_28.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_3.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_4.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_5.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_6.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_7.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_8.root
+inputFile /lustre/home/kchatter/AnalysisSpace/TreeMaker/VH20PUx25bc/VH20PUx25bc_9.root
+END

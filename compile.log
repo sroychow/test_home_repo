@@ -1,0 +1,344 @@
+g++ -I./interface -I./ -Wall -Wno-deprecated `root-config --cflags` -o src/AnaBase.o -c src/AnaBase.cc
+In file included from src/AnaBase.cc:27:0:
+./interface/AnaBase.h: In member function ‘bool VertexComparator::operator()(const vhtm::Vertex&, const vhtm::Vertex&) const’:
+./interface/AnaBase.h:32:14: error: ‘const class vhtm::Vertex’ has no member named ‘sumPt’
+     return a.sumPt > b.sumPt;
+              ^
+./interface/AnaBase.h:32:24: error: ‘const class vhtm::Vertex’ has no member named ‘sumPt’
+     return a.sumPt > b.sumPt;
+                        ^
+In file included from src/AnaBase.cc:28:0:
+./interface/AnaUtil.h: In function ‘double AnaUtil::cutValue(const std::map<std::basic_string<char>, double>&, std::string)’:
+./interface/AnaUtil.h:94:12: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+       for (auto jt  = m.begin(); jt != m.end(); ++jt)  
+            ^
+./interface/AnaUtil.h:94:17: error: ‘jt’ does not name a type
+       for (auto jt  = m.begin(); jt != m.end(); ++jt)  
+                 ^
+./interface/AnaUtil.h:94:34: error: expected ‘;’ before ‘jt’
+       for (auto jt  = m.begin(); jt != m.end(); ++jt)  
+                                  ^
+./interface/AnaUtil.h:94:34: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc: In member function ‘int AnaBase::getEntry(int) const’:
+src/AnaBase.cc:262:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+        ^
+src/AnaBase.cc:262:13: error: ‘it’ does not name a type
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+             ^
+src/AnaBase.cc:262:36: error: expected ‘;’ before ‘it’
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+                                    ^
+src/AnaBase.cc:262:36: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::enableBranches()’:
+src/AnaBase.cc:276:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+        ^
+src/AnaBase.cc:276:13: error: ‘it’ does not name a type
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+             ^
+src/AnaBase.cc:276:36: error: expected ‘;’ before ‘it’
+   for (auto it  = brList_.begin(); it != brList_.end(); ++it) {
+                                    ^
+src/AnaBase.cc:276:36: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘virtual bool AnaBase::readJob(const string&, int&)’:
+src/AnaBase.cc:367:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it  = fileList_.begin(); it != fileList_.end(); ++it) {
+        ^
+src/AnaBase.cc:367:13: error: ‘it’ does not name a type
+   for (auto it  = fileList_.begin(); it != fileList_.end(); ++it) {
+             ^
+src/AnaBase.cc:367:38: error: expected ‘;’ before ‘it’
+   for (auto it  = fileList_.begin(); it != fileList_.end(); ++it) {
+                                      ^
+src/AnaBase.cc:367:38: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findVtxInfo(std::vector<vhtm::Vertex>&, Options&, std::ostream&)’:
+src/AnaBase.cc:437:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = vertexList_->begin(); it != vertexList_->end(); ++it,indx++) {
+        ^
+src/AnaBase.cc:437:13: error: ‘it’ does not name a type
+   for (auto it = vertexList_->begin(); it != vertexList_->end(); ++it,indx++) {
+             ^
+src/AnaBase.cc:437:40: error: expected ‘;’ before ‘it’
+   for (auto it = vertexList_->begin(); it != vertexList_->end(); ++it,indx++) {
+                                        ^
+src/AnaBase.cc:437:40: error: ‘it’ was not declared in this scope
+src/AnaBase.cc:454:30: error: ‘const class vhtm::Vertex’ has no member named ‘sumPt’
+            << setw(8) << vtx.sumPt
+                              ^
+src/AnaBase.cc:457:30: error: ‘const class vhtm::Vertex’ has no member named ‘ntracksw05’
+            << setw(9) << vtx.ntracksw05;
+                              ^
+src/AnaBase.cc: In member function ‘void AnaBase::findMuonInfo(std::vector<vhtm::Muon>&, double, Options&, std::ostream&)’:
+src/AnaBase.cc:477:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it,indx++) {
+        ^
+src/AnaBase.cc:477:13: error: ‘it’ does not name a type
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it,indx++) {
+             ^
+src/AnaBase.cc:477:38: error: expected ‘;’ before ‘it’
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it,indx++) {
+                                      ^
+src/AnaBase.cc:477:38: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findElectronInfo(std::vector<vhtm::Electron>&, double, Options&, std::ostream&)’:
+src/AnaBase.cc:547:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it,indx++) {
+        ^
+src/AnaBase.cc:547:13: error: ‘it’ does not name a type
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it,indx++) {
+             ^
+src/AnaBase.cc:547:42: error: expected ‘;’ before ‘it’
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it,indx++) {
+                                          ^
+src/AnaBase.cc:547:42: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findTauInfo(std::vector<vhtm::Tau>&, double, Options&, std::ostream&)’:
+src/AnaBase.cc:609:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = tauList_->begin(); it != tauList_->end(); ++it,indx++) {
+        ^
+src/AnaBase.cc:609:13: error: ‘it’ does not name a type
+   for (auto it = tauList_->begin(); it != tauList_->end(); ++it,indx++) {
+             ^
+src/AnaBase.cc:609:37: error: expected ‘;’ before ‘it’
+   for (auto it = tauList_->begin(); it != tauList_->end(); ++it,indx++) {
+                                     ^
+src/AnaBase.cc:609:37: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findJetInfo(std::vector<vhtm::Jet>&, Options&, std::ostream&)’:
+src/AnaBase.cc:659:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = jetList_->begin(); it != jetList_->end(); ++it,indx++) {
+        ^
+src/AnaBase.cc:659:13: error: ‘it’ does not name a type
+   for (auto it = jetList_->begin(); it != jetList_->end(); ++it,indx++) {
+             ^
+src/AnaBase.cc:659:37: error: expected ‘;’ before ‘it’
+   for (auto it = jetList_->begin(); it != jetList_->end(); ++it,indx++) {
+                                     ^
+src/AnaBase.cc:659:37: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findTriggerObjectInfo(std::vector<vhtm::TriggerObject>&)’:
+src/AnaBase.cc:698:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = triggerObjList_->begin(); it != triggerObjList_->end(); ++it) {
+        ^
+src/AnaBase.cc:698:13: error: ‘it’ does not name a type
+   for (auto it = triggerObjList_->begin(); it != triggerObjList_->end(); ++it) {
+             ^
+src/AnaBase.cc:698:44: error: expected ‘;’ before ‘it’
+   for (auto it = triggerObjList_->begin(); it != triggerObjList_->end(); ++it) {
+                                            ^
+src/AnaBase.cc:698:44: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findGenInfo(int, std::vector<vhtm::GenParticle>&, std::vector<vhtm::GenParticle>&)’:
+src/AnaBase.cc:758:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+        ^
+src/AnaBase.cc:758:13: error: ‘jt’ does not name a type
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+             ^
+src/AnaBase.cc:758:45: error: expected ‘;’ before ‘jt’
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+                                             ^
+src/AnaBase.cc:758:45: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc:773:12: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+       for (auto it = d.begin(); it != d.end(); ++it) {
+            ^
+src/AnaBase.cc:773:17: error: ‘it’ does not name a type
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                 ^
+src/AnaBase.cc:773:33: error: expected ‘;’ before ‘it’
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                                 ^
+src/AnaBase.cc:773:33: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::findLLTGenInfo(std::vector<vhtm::GenParticle>&, std::vector<vhtm::GenParticle>&, std::vector<vhtm::GenParticle>&)’:
+src/AnaBase.cc:812:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+        ^
+src/AnaBase.cc:812:13: error: ‘jt’ does not name a type
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+             ^
+src/AnaBase.cc:812:45: error: expected ‘;’ before ‘jt’
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+                                             ^
+src/AnaBase.cc:812:45: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc:828:12: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+       for (auto it = d.begin(); it != d.end(); ++it) {
+            ^
+src/AnaBase.cc:828:17: error: ‘it’ does not name a type
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                 ^
+src/AnaBase.cc:828:33: error: expected ‘;’ before ‘it’
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                                 ^
+src/AnaBase.cc:828:33: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::dumpGenInfo(std::ostream&) const’:
+src/AnaBase.cc:897:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt,indx++) {
+        ^
+src/AnaBase.cc:897:13: error: ‘jt’ does not name a type
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt,indx++) {
+             ^
+src/AnaBase.cc:897:45: error: expected ‘;’ before ‘jt’
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt,indx++) {
+                                             ^
+src/AnaBase.cc:897:45: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc:902:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+     for (auto it = m.begin(); it != m.end(); ++it) {
+          ^
+src/AnaBase.cc:902:15: error: ‘it’ does not name a type
+     for (auto it = m.begin(); it != m.end(); ++it) {
+               ^
+src/AnaBase.cc:902:31: error: expected ‘;’ before ‘it’
+     for (auto it = m.begin(); it != m.end(); ++it) {
+                               ^
+src/AnaBase.cc:902:31: error: ‘it’ was not declared in this scope
+src/AnaBase.cc:913:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+     for (auto it = d.begin(); it != d.end(); ++it) {
+          ^
+src/AnaBase.cc:913:15: error: ‘it’ does not name a type
+     for (auto it = d.begin(); it != d.end(); ++it) {
+               ^
+src/AnaBase.cc:913:31: error: expected ‘;’ before ‘it’
+     for (auto it = d.begin(); it != d.end(); ++it) {
+                               ^
+src/AnaBase.cc:913:31: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘double AnaBase::wtPileUp(int&) const’:
+src/AnaBase.cc:965:3: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   auto list = (useTrueNInt_) ? evt.trueNInt : evt.nPU;
+   ^
+src/AnaBase.cc:965:8: error: ‘list’ does not name a type
+   auto list = (useTrueNInt_) ? evt.trueNInt : evt.nPU;
+        ^
+src/AnaBase.cc:966:8: error: ‘list’ was not declared in this scope
+   if (!list.size()) return 1.0;
+        ^
+src/AnaBase.cc:969:9: error: ‘list’ was not declared in this scope
+   nPU = list.at(0);
+         ^
+src/AnaBase.cc:963:16: warning: unused variable ‘evt’ [-Wunused-variable]
+   const Event& evt = eventList_->at(0);
+                ^
+src/AnaBase.cc: In member function ‘bool AnaBase::isTriggered(bool, bool) const’:
+src/AnaBase.cc:979:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+     for (auto it = trigPathList_.begin(); it != trigPathList_.end(); ++it) {
+          ^
+src/AnaBase.cc:979:15: error: ‘it’ does not name a type
+     for (auto it = trigPathList_.begin(); it != trigPathList_.end(); ++it) {
+               ^
+src/AnaBase.cc:979:43: error: expected ‘;’ before ‘it’
+     for (auto it = trigPathList_.begin(); it != trigPathList_.end(); ++it) {
+                                           ^
+src/AnaBase.cc:979:43: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::dumpTriggerObjectInfo(const std::vector<vhtm::TriggerObject>&, std::ostream&) const’:
+src/AnaBase.cc:1024:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it  = list.begin(); it != list.end(); ++it,++indx) {
+        ^
+src/AnaBase.cc:1024:13: error: ‘it’ does not name a type
+   for (auto it  = list.begin(); it != list.end(); ++it,++indx) {
+             ^
+src/AnaBase.cc:1024:33: error: expected ‘;’ before ‘it’
+   for (auto it  = list.begin(); it != list.end(); ++it,++indx) {
+                                 ^
+src/AnaBase.cc:1024:33: error: ‘it’ was not declared in this scope
+src/AnaBase.cc:1033:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+     for (auto jt = path_list.begin(); jt != path_list.end(); ++jt) {
+          ^
+src/AnaBase.cc:1033:15: error: ‘jt’ does not name a type
+     for (auto jt = path_list.begin(); jt != path_list.end(); ++jt) {
+               ^
+src/AnaBase.cc:1033:39: error: expected ‘;’ before ‘jt’
+     for (auto jt = path_list.begin(); jt != path_list.end(); ++jt) {
+                                       ^
+src/AnaBase.cc:1033:39: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc: In member function ‘bool AnaBase::matchTriggerPath(const std::vector<std::basic_string<char> >&, const string&) const’:
+src/AnaBase.cc:1040:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = pathList.begin(); it != pathList.end(); ++it) {
+        ^
+src/AnaBase.cc:1040:13: error: ‘it’ does not name a type
+   for (auto it = pathList.begin(); it != pathList.end(); ++it) {
+             ^
+src/AnaBase.cc:1040:36: error: expected ‘;’ before ‘it’
+   for (auto it = pathList.begin(); it != pathList.end(); ++it) {
+                                    ^
+src/AnaBase.cc:1040:36: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘double AnaBase::matchTriggerObject(const std::vector<vhtm::TriggerObject>&, const TLorentzVector&, const string&, int, double, int&) const’:
+src/AnaBase.cc:1060:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = trigObjList.begin(); it != trigObjList.end(); ++it,++indx) {
+        ^
+src/AnaBase.cc:1060:13: error: ‘it’ does not name a type
+   for (auto it = trigObjList.begin(); it != trigObjList.end(); ++it,++indx) {
+             ^
+src/AnaBase.cc:1060:39: error: expected ‘;’ before ‘it’
+   for (auto it = trigObjList.begin(); it != trigObjList.end(); ++it,++indx) {
+                                       ^
+src/AnaBase.cc:1060:39: error: ‘it’ was not declared in this scope
+src/AnaBase.cc:1065:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+     for (auto istr = path_list.begin(); istr != path_list.end(); ++istr) {
+          ^
+src/AnaBase.cc:1065:15: error: ‘istr’ does not name a type
+     for (auto istr = path_list.begin(); istr != path_list.end(); ++istr) {
+               ^
+src/AnaBase.cc:1065:41: error: expected ‘;’ before ‘istr’
+     for (auto istr = path_list.begin(); istr != path_list.end(); ++istr) {
+                                         ^
+src/AnaBase.cc:1065:41: error: ‘istr’ was not declared in this scope
+src/AnaBase.cc: In member function ‘int AnaBase::vetoMuon(double, double)’:
+src/AnaBase.cc:1090:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it) {
+        ^
+src/AnaBase.cc:1090:13: error: ‘it’ does not name a type
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it) {
+             ^
+src/AnaBase.cc:1090:38: error: expected ‘;’ before ‘it’
+   for (auto it = muonList_->begin(); it != muonList_->end(); ++it) {
+                                      ^
+src/AnaBase.cc:1090:38: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘int AnaBase::vetoElectron(double, double)’:
+src/AnaBase.cc:1110:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it) {
+        ^
+src/AnaBase.cc:1110:13: error: ‘it’ does not name a type
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it) {
+             ^
+src/AnaBase.cc:1110:42: error: expected ‘;’ before ‘it’
+   for (auto it = electronList_->begin(); it != electronList_->end(); ++it) {
+                                          ^
+src/AnaBase.cc:1110:42: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘bool AnaBase::DYtoeeVeto(TLorentzVector, TLorentzVector, double, vhtm::Electron, int)’:
+src/AnaBase.cc:1278:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+        ^
+src/AnaBase.cc:1278:13: error: ‘it’ does not name a type
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+             ^
+src/AnaBase.cc:1278:43: error: expected ‘;’ before ‘it’
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+                                           ^
+src/AnaBase.cc:1278:43: error: ‘it’ was not declared in this scope
+src/AnaBase.cc:1303:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+        ^
+src/AnaBase.cc:1303:13: error: ‘it’ does not name a type
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+             ^
+src/AnaBase.cc:1303:43: error: expected ‘;’ before ‘it’
+   for (auto it = electronColl()->begin(); it != electronColl()->end(); ++it, ++indx) {
+                                           ^
+src/AnaBase.cc:1303:43: error: ‘it’ was not declared in this scope
+src/AnaBase.cc: In member function ‘void AnaBase::isGenMatchedDy(int, std::vector<vhtm::GenParticle>&, bool&)’:
+src/AnaBase.cc:1338:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+        ^
+src/AnaBase.cc:1338:13: error: ‘jt’ does not name a type
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+             ^
+src/AnaBase.cc:1338:45: error: expected ‘;’ before ‘jt’
+   for (auto jt = genParticleList_->begin(); jt != genParticleList_->end(); ++jt) {
+                                             ^
+src/AnaBase.cc:1338:45: error: ‘jt’ was not declared in this scope
+src/AnaBase.cc:1366:12: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+       for (auto it = d.begin(); it != d.end(); ++it) {
+            ^
+src/AnaBase.cc:1366:17: error: ‘it’ does not name a type
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                 ^
+src/AnaBase.cc:1366:33: error: expected ‘;’ before ‘it’
+       for (auto it = d.begin(); it != d.end(); ++it) {
+                                 ^
+src/AnaBase.cc:1366:33: error: ‘it’ was not declared in this scope
+make: *** [src/AnaBase.o] Error 1

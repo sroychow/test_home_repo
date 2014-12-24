@@ -1,0 +1,93 @@
+#ifndef __FakeRate__HH
+#define __FakeRate__HH
+
+#include <fstream>
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <cmath>
+#include "TLorentzVector.h"
+#include "TVector.h"
+#include "TProfile.h"
+
+#include "PhysicsObjects.h"
+#include "AnaBase.h"
+
+using namespace vhtm;
+//class MVASkim;
+namespace TMVA {
+  class Reader;
+}
+class FakeRate : public AnaBase {
+    
+public:
+
+  FakeRate();
+  virtual ~FakeRate();
+    
+  void eventLoop();  // the main analysis 
+  bool beginJob();
+  void endJob();
+  void selectEvent();
+
+  bool readJob(const std::string& jobFile, int& nFiles);
+  void printJob(std::ostream& os=std::cout) const;
+  
+  void clearLists();
+
+  virtual void bookHistograms();
+  void JetToFakeDYJets();
+  void JetToTauFakeWJets();
+  void selectTau();
+  void selectElectron();
+  void ApplyFR();
+  void GenLevelTest();
+public:
+
+  std::vector<vhtm::Vertex> vtxList;
+  std::vector<vhtm::Muon> muoList;
+  std::vector<vhtm::Electron> eleList;
+  std::vector<vhtm::Electron> selectEList;
+  //  std::vector<vhtm::Tau> tauList;
+  std::vector<vhtm::Jet> bjetList;
+  std::vector<vhtm::Tau> selectTauList;
+
+  std::vector<vhtm::GenParticle> genEleList;
+  std::vector<vhtm::GenParticle> genTauList;
+  std::vector<vhtm::GenParticle> genList;
+
+
+  int electron_indx;
+
+
+public:
+  std::map<std::string, double> _evselCutMap;
+  std::map<std::string, double> _electronCutMap;
+
+  //MVA input variables while reading                                                                                                               
+  float lepPt;
+  float tau1Pt;
+  float tau2Pt;
+  float dphilepDiTau;
+  float met;
+  float PtRatio;
+
+  // bool _createMVATree;
+  bool _readMVA;
+  // std::string _mvaInputFile;
+  // MVASkim* _skimObj;
+  TMVA::Reader* reader;
+
+
+  //MVA input variables while reading                                                                                                
+  float leadPt;
+  float subPt;
+  //double met;                                                                                                                      
+  float deltaRDiTau;
+  float ptRatio;
+  TMVA::Reader* reader1;
+
+
+};
+#endif
